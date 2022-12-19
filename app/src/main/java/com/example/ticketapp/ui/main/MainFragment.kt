@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.ticketapp.R
 import com.example.ticketapp.databinding.FragmentFirstBinding
 import com.example.ticketapp.dialog.QrScannerDialog
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,6 +45,11 @@ class MainFragment : Fragment(), QrScannerDialog.CallBack {
             QrScannerDialog(this).show(requireActivity().supportFragmentManager)
         }
 
+        binding.buttonSecond.setOnClickListener {
+            binding.textviewResult.text = ""
+            findNavController().navigate(R.id.SecondFragment)
+        }
+
         setUpObserve()
     }
 
@@ -52,7 +59,25 @@ class MainFragment : Fragment(), QrScannerDialog.CallBack {
             res?.statustext?.let {
                 binding.textviewResult.text = it
 
+                requireContext().resources.getColor(R.color.green_main)
+
             }
+
+            res?.status?.let {
+
+                binding.textviewResult.setTextColor(
+
+                    requireActivity().resources.getColor(
+
+                        when(it){
+                            2-> R.color.green_main
+                            3 -> R.color.red_default
+                            else -> R.color.yellow_main
+                        }
+                    )
+                )
+            }
+
         }
 
     }

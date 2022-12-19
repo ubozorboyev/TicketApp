@@ -21,7 +21,9 @@ import java.util.concurrent.TimeUnit
 object NetworkModule {
 
 
-    private const val BASE_URL = "https://bilet.bgsoft.uz/"
+    var BASE_URL_TEST = ""
+
+     const val BASE_URL = "https://bilet.bgsoft.uz/"
 
     @Provides
     fun provideRetrofitInstance(

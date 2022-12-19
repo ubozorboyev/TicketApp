@@ -16,14 +16,30 @@
         android:textSize="20sp"
         android:paddingVertical="@dimen/dp_12"
         android:textAllCaps="false"
-        android:layout_marginBottom="@dimen/dp_100"
+        app:layout_constraintBottom_toTopOf="@id/button_second"
+        android:layout_marginBottom="@dimen/dp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enter url"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:textSize="20sp"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:paddingVertical="@dimen/dp_12"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
 
     <TextView
-        android:textSize="22sp"
+        android:textSize="32sp"
         android:id="@+id/textview_result"
         android:layout_width="0dp"
         android:gravity="center"

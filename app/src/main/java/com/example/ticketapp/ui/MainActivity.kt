@@ -1,5 +1,6 @@
 package com.example.ticketapp.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -9,17 +10,24 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import com.example.ticketapp.R
+import com.example.ticketapp.data.NetworkModule
 import com.example.ticketapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        getSharedPreferences("app_code", Context.MODE_PRIVATE)?.let {
+            NetworkModule.BASE_URL_TEST =
+                it.getString("BASE_URL","https://bilet.bgsoft.uz/testapi.php?qrcode=")
+                    ?: "https://bilet.bgsoft.uz/testapi.php?qrcode="
+        }
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -34,3 +42,4 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+

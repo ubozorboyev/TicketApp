@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         getSharedPreferences("app_code", Context.MODE_PRIVATE)?.let {
             NetworkModule.BASE_URL_TEST =
-                it.getString("BASE_URL","https://bilet.bgsoft.uz/testapi.php?qrcode=")
-                    ?: "https://bilet.bgsoft.uz/testapi.php?qrcode="
+                it.getString("BASE_URL","") ?: ""
         }
 
 

@@ -7,14 +7,17 @@
     tools:context=".SecondFragment">
 
     <Button
+        android:backgroundTint="@color/button_bg_color"
         android:id="@+id/button_second"
         android:layout_width="0dp"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dp_20"
         android:layout_marginBottom="@dimen/dp_20"
         android:paddingHorizontal="40dp"
         android:paddingVertical="@dimen/dp_12"
         android:text="Save"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

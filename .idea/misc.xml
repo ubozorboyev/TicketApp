@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_add_circle.xml" value="0.148" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_border.xml" value="0.148" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_check_circle.xml" value="0.148" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_circle_x.xml" value="0.148" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_close.xml" value="0.148" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/drawable/ic_error_outline.xml" value="0.148" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/layout/content_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/TicketApp/app/src/main/res/layout/dialog_qr_scanner.xml" value="0.20416666666666666" />
